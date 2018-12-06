@@ -82,7 +82,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/huahuahu/HHH-GTHKit.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/huahuahu/HHH-GTHKit.git"}
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
