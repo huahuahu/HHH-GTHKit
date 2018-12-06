@@ -1,0 +1,23 @@
+PODS:
+  - HHHKit (0.0.1)
+  - SwiftLint (0.24.2)
+
+DEPENDENCIES:
+  - HHHKit (from `../`)
+  - SwiftLint
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - SwiftLint
+
+EXTERNAL SOURCES:
+  HHHKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  HHHKit: f8694c9993d67d13a738394d9b0db2a54366e6b5
+  SwiftLint: 2aa21b96c8d13396a051bc1cb659d2ce1e0075b0
+
+PODFILE CHECKSUM: 632c56624e3fee1956a09a2e695b0b5a46d90c3a
+
+COCOAPODS: 1.5.3
