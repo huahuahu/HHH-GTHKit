@@ -14,6 +14,7 @@
 		264F5F5B21B98ACB004EE536 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 264F5F5921B98ACB004EE536 /* LaunchScreen.storyboard */; };
 		264F5F6621B98ACB004EE536 /* DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264F5F6521B98ACB004EE536 /* DemoTests.swift */; };
 		264F5F7121B98ACB004EE536 /* DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264F5F7021B98ACB004EE536 /* DemoUITests.swift */; };
+		26D2AEB921C6853100241F4D /* TestTuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D2AEB821C6853100241F4D /* TestTuple.swift */; };
 		96721D477F5984298F1F29EE /* Pods_DemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B8DE6DF2EA9E5789CA4D14D /* Pods_DemoTests.framework */; };
 		CD33AE5421589C0D6BAE0A39 /* Pods_DemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F1EA1381DB5ED466D4A326 /* Pods_DemoUITests.framework */; };
 		EB6A9D36E6A8F1D2CE4682C4 /* Pods_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88615D69F6EF9363141D8338 /* Pods_Demo.framework */; };
@@ -52,6 +53,9 @@
 		264F5F6C21B98ACB004EE536 /* DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		264F5F7021B98ACB004EE536 /* DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoUITests.swift; sourceTree = "<group>"; };
 		264F5F7221B98ACB004EE536 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26D2AEB021C684FD00241F4D /* TestTuple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTuple.swift; sourceTree = "<group>"; };
+		26D2AEB221C684FD00241F4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26D2AEB821C6853100241F4D /* TestTuple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTuple.swift; sourceTree = "<group>"; };
 		2B8DE6DF2EA9E5789CA4D14D /* Pods_DemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4695CF6ABA1C3F70C557237A /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
 		6AAD0D8FD9A400E1BA8B3D2A /* Pods-DemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DemoTests/Pods-DemoTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -95,6 +99,7 @@
 				264F5F4F21B98ACA004EE536 /* Demo */,
 				264F5F6421B98ACB004EE536 /* DemoTests */,
 				264F5F6F21B98ACB004EE536 /* DemoUITests */,
+				26D2AEAF21C684FD00241F4D /* TestTuple */,
 				264F5F4E21B98ACA004EE536 /* Products */,
 				333B6E1684388B883A1EDA35 /* Pods */,
 				9B187BA93F312840585C4ECA /* Frameworks */,
@@ -127,6 +132,7 @@
 		264F5F6421B98ACB004EE536 /* DemoTests */ = {
 			isa = PBXGroup;
 			children = (
+				26D2AEB821C6853100241F4D /* TestTuple.swift */,
 				264F5F6521B98ACB004EE536 /* DemoTests.swift */,
 				264F5F6721B98ACB004EE536 /* Info.plist */,
 			);
@@ -140,6 +146,15 @@
 				264F5F7221B98ACB004EE536 /* Info.plist */,
 			);
 			path = DemoUITests;
+			sourceTree = "<group>";
+		};
+		26D2AEAF21C684FD00241F4D /* TestTuple */ = {
+			isa = PBXGroup;
+			children = (
+				26D2AEB021C684FD00241F4D /* TestTuple.swift */,
+				26D2AEB221C684FD00241F4D /* Info.plist */,
+			);
+			path = TestTuple;
 			sourceTree = "<group>";
 		};
 		333B6E1684388B883A1EDA35 /* Pods */ = {
@@ -384,6 +399,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26D2AEB921C6853100241F4D /* TestTuple.swift in Sources */,
 				264F5F6621B98ACB004EE536 /* DemoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -554,7 +570,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Demo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiger.shenzhen.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -569,7 +588,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Demo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiger.shenzhen.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -585,7 +607,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiger.shenzhen.DemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -602,7 +628,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiger.shenzhen.DemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -618,7 +648,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DemoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiger.shenzhen.DemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -634,7 +668,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DemoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiger.shenzhen.DemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
