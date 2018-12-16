@@ -14,6 +14,7 @@
 		264F5F5B21B98ACB004EE536 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 264F5F5921B98ACB004EE536 /* LaunchScreen.storyboard */; };
 		264F5F6621B98ACB004EE536 /* DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264F5F6521B98ACB004EE536 /* DemoTests.swift */; };
 		264F5F7121B98ACB004EE536 /* DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264F5F7021B98ACB004EE536 /* DemoUITests.swift */; };
+		26AFCF2621C69A580075E93B /* TestProtoclClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AFCF2521C69A580075E93B /* TestProtoclClass.swift */; };
 		26D2AEB921C6853100241F4D /* TestTuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D2AEB821C6853100241F4D /* TestTuple.swift */; };
 		96721D477F5984298F1F29EE /* Pods_DemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B8DE6DF2EA9E5789CA4D14D /* Pods_DemoTests.framework */; };
 		CD33AE5421589C0D6BAE0A39 /* Pods_DemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F1EA1381DB5ED466D4A326 /* Pods_DemoUITests.framework */; };
@@ -53,6 +54,7 @@
 		264F5F6C21B98ACB004EE536 /* DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		264F5F7021B98ACB004EE536 /* DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoUITests.swift; sourceTree = "<group>"; };
 		264F5F7221B98ACB004EE536 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26AFCF2521C69A580075E93B /* TestProtoclClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProtoclClass.swift; sourceTree = "<group>"; };
 		26D2AEB021C684FD00241F4D /* TestTuple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTuple.swift; sourceTree = "<group>"; };
 		26D2AEB221C684FD00241F4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26D2AEB821C6853100241F4D /* TestTuple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTuple.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 		264F5F6421B98ACB004EE536 /* DemoTests */ = {
 			isa = PBXGroup;
 			children = (
+				26AFCF2521C69A580075E93B /* TestProtoclClass.swift */,
 				26D2AEB821C6853100241F4D /* TestTuple.swift */,
 				264F5F6521B98ACB004EE536 /* DemoTests.swift */,
 				264F5F6721B98ACB004EE536 /* Info.plist */,
@@ -401,6 +404,7 @@
 			files = (
 				26D2AEB921C6853100241F4D /* TestTuple.swift in Sources */,
 				264F5F6621B98ACB004EE536 /* DemoTests.swift in Sources */,
+				26AFCF2621C69A580075E93B /* TestProtoclClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
