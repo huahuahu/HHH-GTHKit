@@ -24,13 +24,16 @@ class TestProtoclClass: XCTestCase {
         let exp = XCTestExpectation.init(description: "get fail")
         let config = URLSessionConfiguration.default
         config.protocolClasses = [CustomProtocol.self]
-        URLSession.init(configuration: config).dataTask(with: URL.init(string: "custom://d")!) { (data, response, error) in
+        let session = URLSession.init(configuration: config)
+        session.dataTask(with: URL.init(string: "custom://d")!) { (data, response, error) in
+            // 发生这个错误，说明被拦截了
             if let customErr = error as? CustomError {
                 print(customErr.failReason)
                 exp.fulfill()
             } else {
             }
             }.resume()
+
         let result = XCTWaiter.wait(for: [exp], timeout: 3)
         XCTAssertTrue(result == .completed)
     }
@@ -40,7 +43,9 @@ class TestProtoclClass: XCTestCase {
         let exp = XCTestExpectation.init(description: "get fail")
         let config = URLSessionConfiguration.default
         config.protocolClasses = [CustomProtocol.self]
-        URLSession.init(configuration: config).dataTask(with: URL.init(string: "http://d")!) { (data, response, error) in
+        let session = URLSession.init(configuration: config)
+        session.dataTask(with: URL.init(string: "http://d")!) { (data, response, error) in
+            //发生这个协议，说明被拦截了
             if let customErr = error as? HttpError {
                 print(customErr.failReason)
                 exp.fulfill()
@@ -63,7 +68,7 @@ struct HttpError: Error {
 
 class CustomProtocol: URLProtocol {
     override class func canInit(with request: URLRequest) -> Bool {
-        if request.url?.scheme == "custom"  {
+        if request.url?.scheme == "custom" {
             return true
         } else if request.url?.scheme == "http" {
             return true
@@ -87,5 +92,4 @@ class CustomProtocol: URLProtocol {
     override class func canonicalRequest(for request: URLRequest) -> URLRequest {
         return request
     }
-
 }

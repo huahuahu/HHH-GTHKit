@@ -5,7 +5,7 @@
 //  Created by huahuahu on 2018/12/7.
 //  Copyright © 2018 huahuahu. All rights reserved.
 //
-
+//swiftlint:disable line_length
 import XCTest
 
 class DemoUITests: XCTestCase {

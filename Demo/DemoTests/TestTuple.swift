@@ -21,7 +21,7 @@ class TestTuple: XCTestCase {
     func testNamedTuple() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-        let result = minMax(array: [1,2,3,4])
+        let result = minMax(array: [1, 2, 3, 4])
         print(result.min)
         print(result.max)
     }
