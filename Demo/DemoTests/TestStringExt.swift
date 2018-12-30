@@ -1,14 +1,16 @@
 //
-//  TestTuple.swift
-//  TestTuple
+//  DemoTests.swift
+//  DemoTests
 //
-//  Created by huahuahu on 2018/12/16.
+//  Created by huahuahu on 2018/12/7.
 //  Copyright © 2018 huahuahu. All rights reserved.
 //
 
 import XCTest
+@testable import Demo
+@testable import HHHKit
 
-class TestTuple: XCTestCase {
+class TestStringExt: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.

@@ -144,8 +144,6 @@ class TestUiPasteBoard: XCTestCase {
         let firstItemContent = ["type1": "value1", "type2": "value2"]
         customPastBoard.setItems([firstItemContent], options: [:])
         XCTAssertEqual(customPastBoard.types.count, 2, "此时第一个item有两个")
-        XCTAssertEqual(customPastBoard.types.first!, "type1")
-        XCTAssertEqual(customPastBoard.types.last!, "type2")
         XCTAssertTrue(customPastBoard.contains(pasteboardTypes: ["type1"]))
         XCTAssertTrue(customPastBoard.contains(pasteboardTypes: ["type2"]))
         XCTAssertTrue(customPastBoard.contains(pasteboardTypes: ["type1", "type2"]))
