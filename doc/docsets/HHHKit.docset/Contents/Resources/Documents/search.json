@@ -1,0 +1,1 @@
+{"Extensions/String.html#/s:SS6HHHKitE11asciiViewOf12encodingTypeSSSgSS10FoundationE8EncodingV_tF":{"name":"asciiViewOf(encodingType:)","abstract":"<p>string编码后的二进制数据，用字符串展示出来</p>","parent_name":"String"},"Extensions/String.html":{"name":"String"},"Extensions.html":{"name":"Extensions","abstract":"<p>The following extensions are available globally.</p>"}}
