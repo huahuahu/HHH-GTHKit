@@ -43,9 +43,9 @@ class TestUiPasteBoard: XCTestCase {
     }
 
     func testCreateUIPasteBoard() {
-        var board = UIPasteboard.init(name: TestUiPasteBoard.customName, create: false)
-        XCTAssertNotNil(board, "已经创建的粘贴板，可以拿到")
-        board = UIPasteboard.init(name: currentNotExistPasteBoardName, create: false)
+//        var board = UIPasteboard.init(name: TestUiPasteBoard.customName, create: false)
+//        XCTAssertNotNil(board, "已经创建的粘贴板，可以拿到")
+        var board = UIPasteboard.init(name: currentNotExistPasteBoardName, create: false)
         XCTAssertNil(board, "还没创建，取不到")
         board = UIPasteboard.init(name: currentNotExistPasteBoardName, create: true)
         XCTAssertNotNil(board, "还没创建，新创建一个")
