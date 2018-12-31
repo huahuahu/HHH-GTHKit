@@ -7,14 +7,12 @@ target 'Demo' do
   pod 'SwiftLint' , '>=0.29'
   pod 'HHHKit', :path => '../'
 
-  # Pods for Demo
-
-  target 'DemoTests' do
+  target 'SwiftApiPlay' do
     inherit! :search_paths
     # Pods for testing
   end
 
-  target 'DemoUITests' do
+  target 'DemoTests' do
     inherit! :search_paths
     # Pods for testing
   end

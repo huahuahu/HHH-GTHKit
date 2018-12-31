@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import HHHKit
 
 class URLPlay: XCTestCase {
 
@@ -64,8 +65,8 @@ class URLPlay: XCTestCase {
 
         url = URL.init(string: "http://www.baidu.com/aa")!
         url = URL.init(string: "http://www.baidu.com/aa/")!
-        XCTAssertEqual(url.path, "aa", "")
-        XCTAssertEqual(url.path, "aa", "path 不包括最后的斜线")
+        XCTAssertEqual(url.path, "/aa", "")
+        XCTAssertEqual(url.path, "/aa", "path 不包括最后的斜线")
 
         url = URL.init(string: "http://www.joes-hardware.com:80/seasonal/index-fall.html")!
         XCTAssertEqual(url.pathComponents.count, 3, "第一个/也是一个pathComponent")
@@ -95,24 +96,51 @@ class URLPlay: XCTestCase {
         XCTAssertEqual(url.fragment, "drills", "fragment不包括#")
     }
 
-    func testUrlEncode() {
-//        //remove
-//        let generalDelimitersToEncode = ":#[]@" // does not include "?" or "/" due to RFC 3986 - Section 3.4
-//        let subDelimitersToEncode = "!$&'()*+,;="
-//
-//        var allowedCharacterSet = CharacterSet.urlQueryAllowed
-//        allowedCharacterSet.remove(charactersIn: "\(generalDelimitersToEncode)\(subDelimitersToEncode)")
-//
-//        //add
-//        var unReservesChars = CharacterSet.decimalDigits
-//
-//        unReservesChars.insert(charactersIn: "-._~")
-//
-//        unReservesChars == allowedCharacterSet
+    func testUrlComponents() {
+        var urlComponent = URLComponents.init(string: "http://www.baidu.com/df")!
 
+        urlComponent.fragment = "发达"
+        XCTAssertEqual(urlComponent.percentEncodedFragment!, "%E5%8F%91%E8%BE%BE", "%编码后的片段")
+        //新的 -> %e6%96%b0%e7%9a%84
+        urlComponent.percentEncodedFragment = "%e6%96%b0%e7%9a%84"
+        XCTAssertEqual(urlComponent.fragment!, "新的", "设置%编码过后，会自动更新对应的值")
+        // 会crash，因为不是正确的编码后结果
+//        urlComponent.percentEncodedFragment = "%e6%96%b0%e7%9a%%%4"
 
+        urlComponent = URLComponents.init(string: "http://www.baidu.com/df")!
+        XCTAssertEqual(urlComponent.path, "/df", "/及以后")
+        urlComponent = URLComponents.init(string: "http://www.baidu.com/df/")!
+        XCTAssertEqual(urlComponent.path, "/df/", "/及以后，即使以/结尾")
+        urlComponent = URLComponents.init(string: "http://www.baidu.com/df?d=9")!
+        XCTAssertEqual(urlComponent.path, "/df", "/及以后，不包括?")
+        urlComponent = URLComponents.init(string: "http://www.baidu.com/df/?d=9")!
+        XCTAssertEqual(urlComponent.path, "/df/", "/及以后，不包括?,但是包括?之前的/")
+
+        //query d=9&新的=大  新的 ->%e6%96%b0%e7%9a%84 大-> %e5%a4%a7
+        urlComponent = URLComponents.init(string: "http://www.baidu.com/df/?d=9")!
+        XCTAssertEqual(urlComponent.query, "d=9")
+        urlComponent = URLComponents.init(string: "http://www.baidu.com/df/?d=9#d")!
+        XCTAssertEqual(urlComponent.query, "d=9")
+
+        //新的 %-> %e6%96%b0%e7%9a%84
+        //大 %-> %e5%a4%a7
+        //新的=大 -> %e6%96%b0%e7%9a%84=%e5%a4%a7
+        urlComponent = URLComponents.init(string: "http://www.baidu.com/df/?d=9&%e6%96%b0%e7%9a%84=%e5%a4%a7#d")!
+        XCTAssertEqual(urlComponent.query, "d=9&新的=大", "最标准的编解码方法，每个key/value分别编码")
+        XCTAssertEqual(urlComponent.queryItems!.count, 2, "url里有一个&，因此有两个item")
+        XCTAssertEqual(urlComponent.queryItems!.first!.name, "d", "第一个item name是d")
+        XCTAssertEqual(urlComponent.queryItems!.first!.value, "9", "第一个item value是9")
+        XCTAssertEqual(urlComponent.queryItems!.last!.name, "新的", "第二个item name是 新的 ")
+        XCTAssertEqual(urlComponent.queryItems!.last!.value, "大", "第二个item value是 大 ")
+
+        //d=9&新的=大 %-> d%3d9%26%e6%96%b0%e7%9a%84%3d%e5%a4%a7
+        urlComponent = URLComponents.init(string: "http://www.baidu.com/df/?d%3d9%26%e6%96%b0%e7%9a%84%3d%e5%a4%a7#d")!
+        XCTAssertEqual(urlComponent.query, "d=9&新的=大", "也可以把原始的query直接%编码")
+        XCTAssertEqual(urlComponent.queryItems!.count, 1, "url里有一个&都没有，因此只有一个item")
+//        XCTAssertEqual(urlComponent.queryItems!.first!.name, 1, "url里有一个&都没有，因此只有一个item")
+
+        urlComponent = URLComponents.init(string: "http://www.baidu.com/df/?d=9&d=8&d=8")!
+        XCTAssertEqual(urlComponent.queryItems!.count, 3, "有重复的key/value，通通加上去")
 
     }
-
 }
-
