@@ -58,6 +58,14 @@ class URLPlay: XCTestCase {
         var url = URL.init(string: "http://www.baidu.com")!
         XCTAssertNotNil(url.path)
         XCTAssertTrue(url.pathComponents.isEmpty)
+        url = URL.init(string: "http://www.baidu.com/")!
+        XCTAssertEqual(url.path, "/", "/也是路径的一部分")
+        XCTAssertEqual(url.pathComponents.count, 1, "只有一个path component，就是 /")
+
+        url = URL.init(string: "http://www.baidu.com/aa")!
+        url = URL.init(string: "http://www.baidu.com/aa/")!
+        XCTAssertEqual(url.path, "aa", "")
+        XCTAssertEqual(url.path, "aa", "path 不包括最后的斜线")
 
         url = URL.init(string: "http://www.joes-hardware.com:80/seasonal/index-fall.html")!
         XCTAssertEqual(url.pathComponents.count, 3, "第一个/也是一个pathComponent")
@@ -87,4 +95,24 @@ class URLPlay: XCTestCase {
         XCTAssertEqual(url.fragment, "drills", "fragment不包括#")
     }
 
+    func testUrlEncode() {
+//        //remove
+//        let generalDelimitersToEncode = ":#[]@" // does not include "?" or "/" due to RFC 3986 - Section 3.4
+//        let subDelimitersToEncode = "!$&'()*+,;="
+//
+//        var allowedCharacterSet = CharacterSet.urlQueryAllowed
+//        allowedCharacterSet.remove(charactersIn: "\(generalDelimitersToEncode)\(subDelimitersToEncode)")
+//
+//        //add
+//        var unReservesChars = CharacterSet.decimalDigits
+//
+//        unReservesChars.insert(charactersIn: "-._~")
+//
+//        unReservesChars == allowedCharacterSet
+
+
+
+    }
+
 }
+
