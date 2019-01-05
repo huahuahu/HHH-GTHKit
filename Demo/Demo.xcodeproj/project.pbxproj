@@ -25,6 +25,7 @@
 		264F5F5821B98ACB004EE536 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 264F5F5721B98ACB004EE536 /* Assets.xcassets */; };
 		264F5F5B21B98ACB004EE536 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 264F5F5921B98ACB004EE536 /* LaunchScreen.storyboard */; };
 		264F5F6621B98ACB004EE536 /* TestStringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264F5F6521B98ACB004EE536 /* TestStringExt.swift */; };
+		26A37DEC21E08684003393E9 /* MemoryLayoutTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A37DEB21E08684003393E9 /* MemoryLayoutTest.swift */; };
 		78DAB02214E8565A94F89115 /* Pods_TestTextView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EEF1F625CE3BA27A666054B /* Pods_TestTextView.framework */; };
 		96721D477F5984298F1F29EE /* Pods_DemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B8DE6DF2EA9E5789CA4D14D /* Pods_DemoTests.framework */; };
 		CE2739AD05BB50D7E2E40DE4 /* Pods_SwiftApiPlay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C886D29C6D7AB1C29F407D9B /* Pods_SwiftApiPlay.framework */; };
@@ -75,6 +76,7 @@
 		264F5F6121B98ACB004EE536 /* DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		264F5F6521B98ACB004EE536 /* TestStringExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestStringExt.swift; sourceTree = "<group>"; };
 		264F5F6721B98ACB004EE536 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26A37DEB21E08684003393E9 /* MemoryLayoutTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MemoryLayoutTest.swift; path = SwiftApiPlay/MemoryLayoutTest.swift; sourceTree = SOURCE_ROOT; };
 		26AFCF2521C69A580075E93B /* TestProtoclClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProtoclClass.swift; sourceTree = "<group>"; };
 		26D2AEB821C6853100241F4D /* TestTuple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTuple.swift; sourceTree = "<group>"; };
 		2804293325ABE20BAA7DACF6 /* Pods-TestTextView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTextView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestTextView/Pods-TestTextView.debug.xcconfig"; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				263FE14621D930D300742320 /* URLPlay.swift */,
+				26A37DEB21E08684003393E9 /* MemoryLayoutTest.swift */,
 				260DA1B521DA006B00368EFE /* StringFormat.swift */,
 				26D2AEB821C6853100241F4D /* TestTuple.swift */,
 				26AFCF2521C69A580075E93B /* TestProtoclClass.swift */,
@@ -501,7 +504,6 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TestTextView/Pods-TestTextView-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/HHHKit/HHHKit.framework",
-				"${BUILT_PRODUCTS_DIR}/ChromaColorPicker/ChromaColorPicker.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -509,7 +511,6 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HHHKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChromaColorPicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -573,6 +574,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26A37DEC21E08684003393E9 /* MemoryLayoutTest.swift in Sources */,
 				263FE14521D916DB00742320 /* TestUiPasteBoard.swift in Sources */,
 				260DA1B621DA006B00368EFE /* StringFormat.swift in Sources */,
 				263FE14721D930D300742320 /* URLPlay.swift in Sources */,

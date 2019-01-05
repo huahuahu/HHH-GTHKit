@@ -25,7 +25,6 @@ class ViewController: UIViewController {
         return view
     }()
 
-
     let settingButton: UIButton = {
         let button = UIButton.init()
         button.setTitle("settings", for: .normal)
@@ -67,5 +66,3 @@ class ViewController: UIViewController {
     }
 
 }
-
-
