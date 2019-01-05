@@ -1,13 +1,19 @@
 PODS:
+  - ChromaColorPicker (1.7.2)
   - HHHKit (0.0.1)
+  - SnapKit (4.2.0)
   - SwiftLint (0.29.2)
 
 DEPENDENCIES:
+  - ChromaColorPicker
   - HHHKit (from `../`)
+  - SnapKit (~> 4.2)
   - SwiftLint (>= 0.29)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - ChromaColorPicker
+    - SnapKit
     - SwiftLint
 
 EXTERNAL SOURCES:
@@ -15,9 +21,11 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
+  ChromaColorPicker: 78194fbae9f342d3781ac178c4d92c7652197d18
   HHHKit: be19ec9d6411f357c9a67ed436ab9ccbd2289b93
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   SwiftLint: 47df60bdea6e7e902b193b6596db8683aafd86a3
 
-PODFILE CHECKSUM: 0d09bdf7a9b9182d447f0f37f62adaa22570c2c2
+PODFILE CHECKSUM: 79b42e3c58af7cadc6280a19caa7c38935fc3fa5
 
 COCOAPODS: 1.6.0.beta.1
