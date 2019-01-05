@@ -8,7 +8,6 @@
 
 import UIKit
 import SnapKit
-import ChromaColorPicker
 import HHHKit
 
 class ViewController: UIViewController {

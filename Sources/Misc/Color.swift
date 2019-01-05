@@ -8,6 +8,10 @@
 import Foundation
 
 public extension UIColor {
+
+    /// 把颜色转为字符串，argb格式
+    /// - black -> #ff000000
+    /// - white -> #ffffffff
     var rgbString: String {
         var red: CGFloat = 0
         var green: CGFloat = 0
