@@ -56,3 +56,22 @@ private extension Data {
         return map { String(format: "%02x", $0) }.joined(separator: "")
     }
 }
+
+
+// MARK: - 寻找信息
+public extension String {
+
+    /// 字符串中匹配到的url数组
+    var links: [URL] {
+        let types: NSTextCheckingResult.CheckingType = [.link]
+        var urls = [URL]()
+        do {
+            let detector = try NSDataDetector(types: types.rawValue)
+            let range = NSRange.init(self.startIndex..<self.endIndex, in: self)
+            detector.enumerateMatches(in: self, options: [], range: range) { (result, _, _) in
+                if let url = result?.url { urls.append(url) }
+            }
+            return urls
+        } catch { return urls }
+    }
+}

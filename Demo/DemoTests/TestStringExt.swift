@@ -175,3 +175,31 @@ extension TestStringExt {
         XCTAssertEqual(strFromUtfView.lowercased(), strFromData.lowercased(), "系统方法和自己写的方法对UTF32编码不一致, \(encodeType)")
     }
 }
+
+extension TestStringExt {
+    func testUrlMatch() {
+        var str = "http://baidu.com"
+        XCTAssertEqual(str.links, [URL.init(string: "http://baidu.com")!])
+
+        str = "http://baidu.com dfa"
+        XCTAssertEqual(str.links, [URL.init(string: "http://baidu.com")!])
+
+        str = "fdas http://baidu.com dfa"
+        XCTAssertEqual(str.links, [URL.init(string: "http://baidu.com")!])
+
+        str = "fdas http://baidu.com?dfa=90 dfa"
+        XCTAssertEqual(str.links, [URL.init(string: "http://baidu.com?dfa=90")!])
+
+        str = "fdas http://baidu.com:80?dfd=89d dfa"
+        XCTAssertEqual(str.links, [URL.init(string: "http://baidu.com:80?dfd=89d")!])
+
+        str = "fdas http://baidu.com:80?dfd=89d dfa"
+        str += str
+        var url = URL.init(string: "http://baidu.com:80?dfd=89d")!
+        XCTAssertEqual(str.links, Array.init(repeating: url, count: 2))
+
+        str = "fdas ftp://baidu.com:80?dfd=89d dfa"
+        url = URL.init(string: "ftp://baidu.com:80?dfd=89d")!
+        XCTAssertEqual(str.links, Array.init(repeating: url, count: 1))
+    }
+}
