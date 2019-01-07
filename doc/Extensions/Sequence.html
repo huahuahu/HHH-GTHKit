@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>String Extension Reference</title>
+    <title>Sequence Extension Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Extension/String" class="dashAnchor"></a>
-    <a title="String Extension Reference"></a>
+    <a name="//apple_ref/swift/Extension/Sequence" class="dashAnchor"></a>
+    <a title="Sequence Extension Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">HHHKit Docs</a> (100% documented)</p>
@@ -22,7 +22,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">HHHKit Reference</a>
         <img id="carat" src="../img/carat.png" />
-        String Extension Reference
+        Sequence Extension Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -92,10 +92,10 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>String</h1>
+            <h1>Sequence</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">String</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">Sequence</span></code></pre>
 
                 </div>
               </div>
@@ -107,9 +107,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:SS6HHHKitE11asciiViewOf12encodingTypeSSSgSS10FoundationE8EncodingV_tF"></a>
-                    <a name="//apple_ref/swift/Method/asciiViewOf(encodingType:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:SS6HHHKitE11asciiViewOf12encodingTypeSSSgSS10FoundationE8EncodingV_tF">asciiViewOf(encodingType:)</a>
+                    <a name="/s:ST6HHHKitE14forEachPerformyxy7ElementQzKXEKF"></a>
+                    <a name="//apple_ref/swift/Method/forEachPerform(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ST6HHHKitE14forEachPerformyxy7ElementQzKXEKF">forEachPerform(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -117,14 +117,20 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>string编码后的二进制数据，用字符串展示出来</p>
+                        <p>每一个元素运行一次闭包，返回自己</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    闭包里的异常
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">asciiViewOf</span><span class="p">(</span><span class="nv">encodingType</span><span class="p">:</span> <span class="kt">Encoding</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">forEachPerform</span><span class="p">(</span><span class="n">_</span> <span class="nv">body</span><span class="p">:</span> <span class="p">(</span><span class="kt">Element</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">())</span> <span class="k">rethrows</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -135,12 +141,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>encodingType</em>
+                                <em>body</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>字符串转二进制的编码方式</p>
+                                  <p>闭包</p>
                                 </div>
                               </td>
                             </tr>
@@ -149,7 +155,7 @@
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>编码后的二进制数据的字符串表示</p>
+                        <p>自身</p>
                       </div>
                     </section>
                   </div>
@@ -157,9 +163,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:SS6HHHKitE9hexString11encodingTyeSSSgSS_SS10FoundationE8EncodingVtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(hexString:encodingTye:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:SS6HHHKitE9hexString11encodingTyeSSSgSS_SS10FoundationE8EncodingVtcfc">init(hexString:encodingTye:)</a>
+                    <a name="/s:ST6HHHKitE7performyxyxKXEKF"></a>
+                    <a name="//apple_ref/swift/Method/perform(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ST6HHHKitE7performyxyxKXEKF">perform(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -167,14 +173,20 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>从Data 的字符串表示中，解码为字符串</p>
+                        <p>自己作为参数，执行body里的操作</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    闭包里的异常
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">?(</span><span class="nv">hexString</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">encodingTye</span><span class="p">:</span> <span class="kt">Encoding</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">perform</span><span class="p">(</span><span class="n">_</span> <span class="nv">body</span><span class="p">:</span> <span class="p">(</span><span class="k">Self</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">())</span> <span class="k">rethrows</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -185,75 +197,21 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>hexString</em>
+                                <em>body</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>Data 的字符串表示</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>encodingTye</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>编码类型</p>
+                                  <p>闭包，参数是自己</p>
                                 </div>
                               </td>
                             </tr>
                           </tbody>
                         </table>
                       </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:SS6HHHKitE14urlQueryEscapeSSyF"></a>
-                    <a name="//apple_ref/swift/Method/urlQueryEscape()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:SS6HHHKitE14urlQueryEscapeSSyF">urlQueryEscape()</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Returns a percent-escaped string following RFC 3986 for a query string key or value.</p>
-
-<p>RFC 3986 states that the following characters are <q>reserved</q> characters.</p>
-
-<ul>
-<li>General Delimiters: <q>:</q>, <q>#</q>, <q>[</q>, <q>]</q>, <q>@</q>, <q>?</q>, <q>/</q></li>
-<li>Sub-Delimiters: <q>!</q>, <q>$</q>, <q>&</q>, <q>&lsquo;</q>, <q>(</q>, <q>)</q>, <q>*</q>, <q>+</q>, <q>,</q>, <q>;</q>, <q>=</q></li>
-</ul>
-
-<p>In RFC 3986 - Section 3.4, it states that the <q>?</q> and <q>/</q> characters should not be escaped to allow
-query strings to include a URL. Therefore, all <q>reserved</q> characters with the exception of <q>?</q> and <q>/</q>
-should be percent-escaped in the query string.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">urlQueryEscape</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>The percent-escaped string.</p>
+                        <p>自己</p>
                       </div>
                     </section>
                   </div>

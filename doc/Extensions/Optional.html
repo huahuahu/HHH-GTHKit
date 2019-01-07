@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>ColorPicker Class Reference</title>
+    <title>Optional Extension Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Class/ColorPicker" class="dashAnchor"></a>
-    <a title="ColorPicker Class Reference"></a>
+    <a name="//apple_ref/swift/Extension/Optional" class="dashAnchor"></a>
+    <a title="Optional Extension Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">HHHKit Docs</a> (100% documented)</p>
@@ -22,7 +22,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">HHHKit Reference</a>
         <img id="carat" src="../img/carat.png" />
-        ColorPicker Class Reference
+        Optional Extension Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -92,15 +92,15 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>ColorPicker</h1>
+            <h1>Optional</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ColorPicker</span> <span class="p">:</span> <span class="kt">UIView</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">@_frozen</span>
+<span class="kd">enum</span> <span class="kt">Optional</span><span class="o">&lt;</span><span class="kt">Wrapped</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">ExpressibleByNilLiteral</span></code></pre>
 
                 </div>
               </div>
-            <p>颜色选择器</p>
-
+            
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -108,9 +108,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6HHHKit11ColorPickerC013currentSelectB0So7UIColorCvp"></a>
-                    <a name="//apple_ref/swift/Property/currentSelectColor" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6HHHKit11ColorPickerC013currentSelectB0So7UIColorCvp">currentSelectColor</a>
+                    <a name="/s:Sq6HHHKitSbRszlE7orFalseSbvp"></a>
+                    <a name="//apple_ref/swift/Property/orFalse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sq6HHHKitSbRszlE7orFalseSbvp">orFalse</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -118,13 +118,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>如果不是nil，返回对应的值；否则返回false</p>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">currentSelectColor</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">orFalse</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -134,9 +135,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@HHHKit@objc(cs)ColorPicker(im)initWithFrame:"></a>
-                    <a name="//apple_ref/swift/Method/init(frame:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@HHHKit@objc(cs)ColorPicker(im)initWithFrame:">init(frame:)</a>
+                    <a name="/s:Sq6HHHKitSbRszlE6orTrueSbvp"></a>
+                    <a name="//apple_ref/swift/Property/orTrue" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sq6HHHKitSbRszlE6orTrueSbvp">orTrue</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -144,13 +145,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>如果不是nil，返回对应的值；否则返回true</p>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">override</span> <span class="nf">init</span><span class="p">(</span><span class="nv">frame</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">orTrue</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
