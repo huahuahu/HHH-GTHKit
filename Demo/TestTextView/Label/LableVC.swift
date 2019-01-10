@@ -55,7 +55,9 @@ class LableVC: UIViewController {
 }
 
 extension LableVC: AlignmentSelectorDelegate {
-    func selector(_ selector: AlignmentSelector, didSelectVerticalAlignment verticalAlignment: HHLabel.VertialAlignment, horizontalAliment: HHLabel.HorizontalAlignment) {
+    func selector(_ selector: AlignmentSelector,
+                  didSelectVerticalAlignment verticalAlignment: HHLabel.VertialAlignment,
+                  horizontalAliment: HHLabel.HorizontalAlignment) {
         label.horizontalAliment = horizontalAliment
         label.verticalAliment = verticalAlignment
         label.setNeedsDisplay()

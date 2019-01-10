@@ -11,7 +11,9 @@ import HHHKit
 import SnapKit
 
 protocol AlignmentSelectorDelegate: class {
-    func selector(_ selector: AlignmentSelector, didSelectVerticalAlignment verticalAlignment: HHLabel.VertialAlignment, horizontalAliment: HHLabel.HorizontalAlignment )
+    func selector(_ selector: AlignmentSelector,
+                  didSelectVerticalAlignment verticalAlignment: HHLabel.VertialAlignment,
+                  horizontalAliment: HHLabel.HorizontalAlignment )
 }
 
 class AlignmentSelector: UIView {
@@ -59,12 +61,12 @@ class AlignmentSelector: UIView {
         alimentors.forEach { $0.setSelected($0.button == button) }
 
         if delegate != nil, let selected = alimentors.first(where: {$0.button == button}) {
-            delegate!.selector(self, didSelectVerticalAlignment: selected.vertical, horizontalAliment: selected.horizontal)
+            delegate!.selector(self, didSelectVerticalAlignment: selected.vertical,
+                               horizontalAliment: selected.horizontal)
         }
     }
 
 }
-
 
 private extension AlignmentSelector {
     struct Alimentor {
