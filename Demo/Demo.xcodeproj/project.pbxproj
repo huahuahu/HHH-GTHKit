@@ -16,6 +16,7 @@
 		260F48D821DE5208006E9CA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 260F48D721DE5208006E9CA8 /* Assets.xcassets */; };
 		260F48DB21DE5208006E9CA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 260F48D921DE5208006E9CA8 /* LaunchScreen.storyboard */; };
 		26201E3621E7988C005E3B16 /* TestWrapped.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26201E3521E7988C005E3B16 /* TestWrapped.swift */; };
+		26201E3821E7A082005E3B16 /* TestDataAndTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26201E3721E7A082005E3B16 /* TestDataAndTime.swift */; };
 		263FE14521D916DB00742320 /* TestUiPasteBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263FE14421D916DB00742320 /* TestUiPasteBoard.swift */; };
 		263FE14721D930D300742320 /* URLPlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263FE14621D930D300742320 /* URLPlay.swift */; };
 		263FE15F21D9484800742320 /* TestProtoclClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AFCF2521C69A580075E93B /* TestProtoclClass.swift */; };
@@ -67,6 +68,7 @@
 		260F48DA21DE5208006E9CA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		260F48DC21DE5208006E9CA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26201E3521E7988C005E3B16 /* TestWrapped.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestWrapped.swift; sourceTree = "<group>"; };
+		26201E3721E7A082005E3B16 /* TestDataAndTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDataAndTime.swift; sourceTree = "<group>"; };
 		263FE13A21D916B600742320 /* SwiftApiPlay.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftApiPlay.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		263FE13E21D916B600742320 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		263FE14421D916DB00742320 /* TestUiPasteBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUiPasteBoard.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 		263FE13B21D916B600742320 /* SwiftApiPlay */ = {
 			isa = PBXGroup;
 			children = (
+				26201E3721E7A082005E3B16 /* TestDataAndTime.swift */,
 				26A37DF721E39D4A003393E9 /* TestOptional.swift */,
 				263FE14621D930D300742320 /* URLPlay.swift */,
 				26A37DEB21E08684003393E9 /* MemoryLayoutTest.swift */,
@@ -600,6 +603,7 @@
 				263FE14521D916DB00742320 /* TestUiPasteBoard.swift in Sources */,
 				260DA1B621DA006B00368EFE /* StringFormat.swift in Sources */,
 				263FE14721D930D300742320 /* URLPlay.swift in Sources */,
+				26201E3821E7A082005E3B16 /* TestDataAndTime.swift in Sources */,
 				263FE15F21D9484800742320 /* TestProtoclClass.swift in Sources */,
 				263FE16021D9484B00742320 /* TestTuple.swift in Sources */,
 				26A37DF821E39D4A003393E9 /* TestOptional.swift in Sources */,
