@@ -66,6 +66,16 @@
                referenceType = "1">
             </LocationScenarioReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "26201E3E21EA1A02005E3B16"
+               BuildableName = "FunctionProgram.xctest"
+               BlueprintName = "FunctionProgram"
+               ReferencedContainer = "container:Demo.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
