@@ -43,6 +43,7 @@
 		26C6E69421EAF75B00E34232 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26C6E69221EAF75B00E34232 /* LaunchScreen.storyboard */; };
 		26C6E6B621EAF8F300E34232 /* CoreGraphDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6E6B521EAF8F300E34232 /* CoreGraphDemoVC.swift */; };
 		26C6E6BE21EB041B00E34232 /* CoreGraphUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6E6BD21EB041B00E34232 /* CoreGraphUITests.swift */; };
+		26C6E6C821EB0BB900E34232 /* ParserDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6E6C721EB0BB900E34232 /* ParserDemo.swift */; };
 		78DAB02214E8565A94F89115 /* Pods_TestTextView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EEF1F625CE3BA27A666054B /* Pods_TestTextView.framework */; };
 		96721D477F5984298F1F29EE /* Pods_DemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B8DE6DF2EA9E5789CA4D14D /* Pods_DemoTests.framework */; };
 		A9CD7F38B97BBBD14524D9FE /* Pods_CoreGraphFunc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E496E841009E55BA1B70D18C /* Pods_CoreGraphFunc.framework */; };
@@ -141,6 +142,7 @@
 		26C6E6BB21EB041B00E34232 /* CoreGraphUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreGraphUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		26C6E6BD21EB041B00E34232 /* CoreGraphUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreGraphUITests.swift; sourceTree = "<group>"; };
 		26C6E6BF21EB041B00E34232 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26C6E6C721EB0BB900E34232 /* ParserDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ParserDemo.swift; path = FunctionProgram/ParserDemo.swift; sourceTree = SOURCE_ROOT; };
 		26D2AEB821C6853100241F4D /* TestTuple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTuple.swift; sourceTree = "<group>"; };
 		2804293325ABE20BAA7DACF6 /* Pods-TestTextView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTextView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestTextView/Pods-TestTextView.debug.xcconfig"; sourceTree = "<group>"; };
 		2B8DE6DF2EA9E5789CA4D14D /* Pods_DemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -235,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				26201E4B21EA2420005E3B16 /* Trie.swift */,
+				26C6E6C721EB0BB900E34232 /* ParserDemo.swift */,
 				26201E4921EA1A13005E3B16 /* BinaryTree.swift */,
 				26201E4121EA1A02005E3B16 /* FunctionProgram.swift */,
 				26201E4321EA1A02005E3B16 /* Info.plist */,
@@ -861,6 +864,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26C6E6C821EB0BB900E34232 /* ParserDemo.swift in Sources */,
 				26201E4C21EA2420005E3B16 /* Trie.swift in Sources */,
 				26201E4A21EA1A13005E3B16 /* BinaryTree.swift in Sources */,
 				26201E4221EA1A02005E3B16 /* FunctionProgram.swift in Sources */,
