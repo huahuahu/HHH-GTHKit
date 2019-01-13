@@ -67,12 +67,26 @@
             </LocationScenarioReference>
          </TestableReference>
          <TestableReference
-            skipped = "NO">
+            skipped = "NO"
+            parallelizable = "YES"
+            testExecutionOrdering = "random">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "26201E3E21EA1A02005E3B16"
                BuildableName = "FunctionProgram.xctest"
                BlueprintName = "FunctionProgram"
+               ReferencedContainer = "container:Demo.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES"
+            testExecutionOrdering = "random">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "26C6E6BA21EB041B00E34232"
+               BuildableName = "CoreGraphUITests.xctest"
+               BlueprintName = "CoreGraphUITests"
                ReferencedContainer = "container:Demo.xcodeproj">
             </BuildableReference>
          </TestableReference>

@@ -108,7 +108,7 @@ extension Trie {
     static func build(words: [String]) -> Trie<Character> {
         let emptyTrie = Trie<Character>()
         return words.reduce(emptyTrie) { (trie, word) in
-            trie.inserting(word.map{ $0 }.slice)
+            trie.inserting(word.map {$0}.slice)
         }
     }
 }
