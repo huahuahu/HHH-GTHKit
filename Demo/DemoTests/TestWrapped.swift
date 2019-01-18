@@ -59,8 +59,67 @@ class TestWrapped: XCTestCase {
         print("expected is \(changeCount), result is \(wrapped.value)")
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testBindingBox() {
+        let box = Box<Int>.init(4)
+        var current = 3
+        box.bind { (value) in
+            current = value
+        }
+
+        XCTAssertEqual(current, 4, "初次数据绑定，会更新")
+        (1...50).map { _ in
+            Int.random(in: 0...3938393)
+            }.forEach { (value) in
+                box.value = value
+                XCTAssertEqual(box.value, current)
+                XCTAssertEqual(box.value, value)
+        }
     }
+
+    ///测试绑定多个对象
+    func testMultiBind() {
+        let box = Box<Int>.init(4)
+        let observer1 = ObserverExample.init()
+        let observer2 = ObserverExample.init()
+        let observer3 = ObserverExample.init()
+
+        box.bind { (value) in
+            observer1.value = value
+        }
+        box.bind(target: observer2) { [unowned observer2 ] (value) in
+            observer2.value = value
+        }
+        box.bind(target: observer3) { [unowned observer3 ] (value) in
+            observer3.value = value
+        }
+
+        //初次绑定
+        let observers = [observer1, observer2, observer3]
+        observers.forEach { (observer) in
+            XCTAssertEqual(observer.value, box.value)
+        }
+
+        // 每次更新都会通知到观察者
+        (1...50).map { _ in
+            Int.random(in: 0...3938393)
+            }.forEach { (value) in
+                box.value = value
+                observers.forEach { (observer) in
+                    XCTAssertEqual(observer.value, box.value)
+                }
+                XCTAssertEqual(box.value, value)
+        }
+
+        // 去掉 observer2 对box 的监听
+        box.bind(target: observer2, block: nil)
+        box.value = -9
+        XCTAssertEqual(box.value, observer1.value)
+        XCTAssertEqual(box.value, observer3.value)
+        XCTAssertNotEqual(box.value, observer2.value)
+    }
+}
+
+class ObserverExample {
+    var value: Int = 0
+
 }
