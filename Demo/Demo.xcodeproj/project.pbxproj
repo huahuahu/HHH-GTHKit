@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2604449021F2B78B00F92CEA /* TestMultiThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2604448F21F2B78B00F92CEA /* TestMultiThread.swift */; };
+		2604449221F2BEA900F92CEA /* TestCookie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2604449121F2BEA900F92CEA /* TestCookie.swift */; };
 		260DA1B621DA006B00368EFE /* StringFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260DA1B521DA006B00368EFE /* StringFormat.swift */; };
 		260DA1BC21DA08FE00368EFE /* TestNumberHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260DA1BB21DA08FE00368EFE /* TestNumberHex.swift */; };
 		260DA1C121DA283900368EFE /* TestURLEncodec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260DA1C021DA283900368EFE /* TestURLEncodec.swift */; };
@@ -97,6 +98,7 @@
 		14FEE6A10AC76C67D462B71C /* Pods-DemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DemoTests/Pods-DemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1DE8B1D0D325E4820DEA0A79 /* Pods-CoreGraphFunc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreGraphFunc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoreGraphFunc/Pods-CoreGraphFunc.debug.xcconfig"; sourceTree = "<group>"; };
 		2604448F21F2B78B00F92CEA /* TestMultiThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMultiThread.swift; sourceTree = "<group>"; };
+		2604449121F2BEA900F92CEA /* TestCookie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCookie.swift; sourceTree = "<group>"; };
 		260DA1B521DA006B00368EFE /* StringFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StringFormat.swift; path = SwiftApiPlay/StringFormat.swift; sourceTree = SOURCE_ROOT; };
 		260DA1BB21DA08FE00368EFE /* TestNumberHex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNumberHex.swift; sourceTree = "<group>"; };
 		260DA1C021DA283900368EFE /* TestURLEncodec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestURLEncodec.swift; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 		263FE13B21D916B600742320 /* SwiftApiPlay */ = {
 			isa = PBXGroup;
 			children = (
+				2604449121F2BEA900F92CEA /* TestCookie.swift */,
 				26C6E6CB21EB4BA500E34232 /* CodeablePlay.swift */,
 				26201E3921E7AAED005E3B16 /* StringPlay.swift */,
 				26201E3721E7A082005E3B16 /* TestDataAndTime.swift */,
@@ -891,6 +894,7 @@
 				260DA1B621DA006B00368EFE /* StringFormat.swift in Sources */,
 				263FE14721D930D300742320 /* URLPlay.swift in Sources */,
 				26201E3821E7A082005E3B16 /* TestDataAndTime.swift in Sources */,
+				2604449221F2BEA900F92CEA /* TestCookie.swift in Sources */,
 				263FE15F21D9484800742320 /* TestProtoclClass.swift in Sources */,
 				263FE16021D9484B00742320 /* TestTuple.swift in Sources */,
 				26A37DF821E39D4A003393E9 /* TestOptional.swift in Sources */,
