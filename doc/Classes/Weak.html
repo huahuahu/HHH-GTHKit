@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Attribute Enumeration Reference</title>
+    <title>Weak Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Enum/Attribute" class="dashAnchor"></a>
-    <a title="Attribute Enumeration Reference"></a>
+    <a name="//apple_ref/swift/Class/Weak" class="dashAnchor"></a>
+    <a title="Weak Class Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">HHHKit Docs</a> (100% documented)</p>
@@ -22,7 +22,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">HHHKit Reference</a>
         <img id="carat" src="../img/carat.png" />
-        Attribute Enumeration Reference
+        Weak Class Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -136,18 +136,14 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>Attribute</h1>
+            <h1>Weak</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Attribute</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">Weak</span><span class="o">&lt;</span><span class="kt">Wrapped</span><span class="o">&gt;</span></code></pre>
 
                 </div>
               </div>
-            <p>支持的定制化</p>
-
-<ul>
-<li>fillColor: 用颜色填充</li>
-</ul>
+            <p>对Object 的封装。并不持有真正的对象。当真正的内容不被持有时，value返回nil</p>
 
           </section>
           <section class="section task-group-section">
@@ -156,9 +152,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6HHHKit9AttributeO9fillColoryACSo7UIColorCcACmF"></a>
-                    <a name="//apple_ref/swift/Element/fillColor(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6HHHKit9AttributeO9fillColoryACSo7UIColorCcACmF">fillColor(_:)</a>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Property/value" class="dashAnchor"></a>
+                    <a class="token" href="#/">value</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -168,11 +164,30 @@
                       <div class="abstract">
                         
                       </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6HHHKit4WeakC5valuexSgvp"></a>
+                    <a name="//apple_ref/swift/Property/value" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6HHHKit4WeakC5valuexSgvp">value</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>通过它来读取要存储的对象，被弱引用了</p>
+
+                      </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">fillColor</span><span class="p">(</span><span class="kt">UIColor</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">Wrapped</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>

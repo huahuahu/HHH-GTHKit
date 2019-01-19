@@ -9,6 +9,8 @@
 import XCTest
 @testable import Demo
 @testable import HHHKit
+import Quick
+import Nimble
 
 class TestStringExt: XCTestCase {
 
@@ -201,5 +203,32 @@ extension TestStringExt {
         str = "fdas ftp://baidu.com:80?dfd=89d dfa"
         url = URL.init(string: "ftp://baidu.com:80?dfd=89d")!
         XCTAssertEqual(str.links, Array.init(repeating: url, count: 1))
+    }
+}
+
+class Wrapper: QuickSpec {
+
+    class Example {
+        var value = ""
+    }
+
+    override func spec() {
+        describe("Wrapped Weak Test") {
+            it("被其他对象持有时，可以取到值") {
+                let expObj = Example.init()
+                let weakWrap = Weak<Example>()
+                weakWrap.value = expObj
+                expect(weakWrap.value).toNot(beNil())
+            }
+            it("没有被其他对象持有时，取到的值时是nil") {
+                var expObj: Example? = Example.init()
+                var array = [expObj]
+                let weakWrap = Weak<Example>()
+                weakWrap.value = expObj
+                expObj = nil
+                array.removeAll()
+                expect(weakWrap.value).to(beNil())
+            }
+        }
     }
 }

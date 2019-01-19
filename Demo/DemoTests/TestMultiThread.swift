@@ -37,6 +37,12 @@ class TestMultiThread: XCTestCase {
             //在主线程，不是主队列
             XCTAssertTrue(Thread.isMainThread)
             XCTAssertEqual(DispatchQueue.isMain, false)
+//            dispatch_sync called on queue already owned by current thread
+//            DispatchQueue.main.sync {
+//                // 在主线程，是主队列
+//                XCTAssertEqual(DispatchQueue.isMain, true)
+//                XCTAssertTrue(Thread.isMainThread)
+//            }
         }
 
         DispatchQueue.main.async {

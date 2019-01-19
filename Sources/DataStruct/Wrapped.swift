@@ -95,3 +95,28 @@ public final class Box<T> {
     }
 }
 
+// copy from swinject
+
+/// 对Object 的封装。并不持有真正的对象。当真正的内容不被持有时，value返回nil
+public class Weak<Wrapped> {
+    private weak var object: AnyObject?
+
+    #if os(Linux)
+    public var value: Wrapped? {
+        get {
+            guard let object = object else { return nil }
+            return object as? Wrapped
+        }
+        set { object = newValue.flatMap { $0 as? AnyObject } }
+    }
+    #else
+    /// 通过它来读取要存储的对象，被弱引用了
+    public var value: Wrapped? {
+        get {
+            guard let object = object else { return nil }
+            return object as? Wrapped
+        }
+        set { object = newValue as AnyObject? }
+    }
+    #endif
+}
