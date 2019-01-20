@@ -232,3 +232,18 @@ class Wrapper: QuickSpec {
         }
     }
 }
+
+class EncryptString: QuickSpec {
+    override func spec() {
+        describe("encrypt check") {
+            it("md5 right", closure: {
+                expect("huahuahu".md5()).to(equal("c0b7bf0c417a758d2949eb6bee37800e"))
+                expect("HUAHUAHU".md5()).to(equal("69572aeb13a540699a84af7ce2b79255"))
+            })
+            it("sha1 right", closure: {
+                expect("huahuahu".sha1()).to(equal("36eda0c2b96f129cc40e64705a7c4fe3dc7f5a08"))
+                expect("HUAHUAHU".sha1()).to(equal("a8a0e07b5f1658ebf55790bca3bf3978064948b9"))
+            })
+        }
+    }
+}
