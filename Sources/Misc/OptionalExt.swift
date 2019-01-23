@@ -29,3 +29,12 @@ public extension Optional where Wrapped == Bool {
         }
     }
 }
+
+public extension Optional where Wrapped: Collection {
+
+    /// 如果非空，返回值；否则返回nil
+    public var nonEmpty: Wrapped? {
+        return self?.isEmpty == true ? nil : self
+    }
+}
+

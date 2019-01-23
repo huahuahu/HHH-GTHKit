@@ -8,6 +8,8 @@
 
 import XCTest
 import HHHKit
+import Quick
+import Nimble
 
 class TestWrapped: XCTestCase {
 
@@ -122,4 +124,19 @@ class TestWrapped: XCTestCase {
 class ObserverExample {
     var value: Int = 0
 
+}
+
+class OptionalExtSpec: QuickSpec {
+    override func spec() {
+        describe("测试optiontype") {
+            it("orEmpty 应该正确", closure: {
+                var str: String? = ""
+                expect(str.nonEmpty).to(beNil())
+                str = "token"
+                expect(str.nonEmpty).toNot(beNil())
+                str = nil
+                expect(str.nonEmpty).to(beNil())
+            })
+        }
+    }
 }

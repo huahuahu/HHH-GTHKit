@@ -8,12 +8,12 @@
 import Foundation
 import CommonCrypto
 
-extension String {
+public extension String {
 
     /// 对字符串MD5加密
     ///
     /// - Returns: 字符串md5 之后的结果
-    func md5() -> String {
+    public func md5() -> String {
         var digest = [UInt8](repeating: 0, count: Int(CC_MD5_DIGEST_LENGTH))
         if let d = self.data(using: String.Encoding.utf8) {
             _ = d.withUnsafeBytes { (body: UnsafePointer<UInt8>) in
@@ -26,7 +26,7 @@ extension String {
     /// 对字符串 sha1 加密
     ///
     /// - Returns: 字符串 sha1 之后的结果
-    func sha1() -> String {
+    public func sha1() -> String {
         var digest = [UInt8](repeating: 0, count: Int(CC_SHA1_DIGEST_LENGTH))
 
         if let d = self.data(using: String.Encoding.utf8) {
