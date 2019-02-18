@@ -7,6 +7,9 @@
 //
 
 import XCTest
+import Quick
+import Nimble
+import Foundation
 
 class StringPlay: XCTestCase {
 
@@ -35,4 +38,79 @@ class StringPlay: XCTestCase {
         print("重庆 重量 张诗园".applyingTransform(.mandarinToLatin, reverse: false)!)
     }
 
+}
+
+class RegexPlaySpec: QuickSpec {
+    //    https://nshipster.com/swift-regular-expressions/
+    override func spec() {
+        it("正确识别正则表达式") {
+            let invitation = "Fancy a game of Cluedo?"
+            //\b: word boundary
+            let range = invitation.range(of: #"\bClue(do)?\b"#, options: .regularExpression)
+            let matchedStr = invitation[range!]
+            expect(matchedStr).to(equal("Cluedo"))
+        }
+
+        it("可以正确替换") {
+            let instructions = "murder of Dr. Black"
+            let replaced = instructions.replacingOccurrences(
+                of: #"(Dr\.|Doctor) Black"#,
+                with: "Mr. Boddy",
+                options: .regularExpression
+            )
+            expect(replaced).to(equal("murder of Mr. Boddy"))
+        }
+        it("Capture Groups demo") {
+            let description = "Cluedo is a game of skill for 2-6 players."
+            //two capture groups (\d+) (\d+)
+            // Pd:  Unicode General Category Pd (Punctuation, dash)
+            // \p{UNICODE PROPERTY NAME} Match any character with the specified Unicode Property.
+            let pattern = #"(\d+)[ \p{Pd}](\d+) players"#
+            let regex = try? NSRegularExpression(pattern: pattern, options: [])
+
+            var playerRange: ClosedRange<Int>?
+            let nsrange = NSRange(description.startIndex..<description.endIndex,
+                                  in: description)
+            regex?.enumerateMatches(in: description,
+                                    options: [],
+                                    range: nsrange) { (match, _, stop) in
+                                        guard let match = match else { return }
+
+                                        if match.numberOfRanges == 3, //两个 Capture Groups，一个全部
+                                            //第一个 Capture Groups
+                                            let firstCaptureRange = Range(match.range(at: 1),
+                                                                          in: description),
+                                            // 第二个 Capture Groups
+                                            let secondCaptureRange = Range(match.range(at: 2),
+                                                                           in: description),
+                                            let lowerBound = Int(description[firstCaptureRange]),
+                                            let upperBound = Int(description[secondCaptureRange]),
+                                            lowerBound > 0 && lowerBound < upperBound {
+                                            playerRange = lowerBound...upperBound
+                                            stop.pointee = true
+                                        }
+            }
+
+            expect(playerRange!.lowerBound).to(equal(2))
+            expect(playerRange!.upperBound).to(equal(6))
+        }
+        it("Named Capture Groups demo") {
+            let suggestion = "I suspect it was Professor Plum in the Dining Room with the Candlestick."
+            let pattern = #"(?<suspect>Professor Plum) in the"#
+            let regex = try? NSRegularExpression(pattern: pattern, options: [])
+            let nsrange = NSRange(suggestion.startIndex..<suggestion.endIndex,
+                                  in: suggestion)
+            if let match = regex?.firstMatch(in: suggestion,
+                                             options: [],
+                                             range: nsrange) {
+                for component in ["suspect"] {
+                    let nsrange = match.range(withName: component)
+                    if nsrange.location != NSNotFound,
+                        let range = Range(nsrange, in: suggestion) {
+                        expect(suggestion[range]).to(equal("Professor Plum"))
+                    }
+                }
+            }
+        }
+    }
 }
