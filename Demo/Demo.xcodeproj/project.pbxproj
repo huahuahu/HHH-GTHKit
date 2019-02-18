@@ -23,6 +23,7 @@
 		26201E4221EA1A02005E3B16 /* FunctionProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26201E4121EA1A02005E3B16 /* FunctionProgram.swift */; };
 		26201E4A21EA1A13005E3B16 /* BinaryTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26201E4921EA1A13005E3B16 /* BinaryTree.swift */; };
 		26201E4C21EA2420005E3B16 /* Trie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26201E4B21EA2420005E3B16 /* Trie.swift */; };
+		26292E1A21FC9872006C19BE /* MirrorPlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26292E1921FC9872006C19BE /* MirrorPlay.swift */; };
 		263FE14521D916DB00742320 /* TestUiPasteBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263FE14421D916DB00742320 /* TestUiPasteBoard.swift */; };
 		263FE14721D930D300742320 /* URLPlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263FE14621D930D300742320 /* URLPlay.swift */; };
 		263FE15F21D9484800742320 /* TestProtoclClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AFCF2521C69A580075E93B /* TestProtoclClass.swift */; };
@@ -117,6 +118,7 @@
 		26201E4321EA1A02005E3B16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26201E4921EA1A13005E3B16 /* BinaryTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryTree.swift; sourceTree = "<group>"; };
 		26201E4B21EA2420005E3B16 /* Trie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trie.swift; sourceTree = "<group>"; };
+		26292E1921FC9872006C19BE /* MirrorPlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MirrorPlay.swift; sourceTree = "<group>"; };
 		263FE13A21D916B600742320 /* SwiftApiPlay.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftApiPlay.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		263FE13E21D916B600742320 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		263FE14421D916DB00742320 /* TestUiPasteBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUiPasteBoard.swift; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 		263FE13B21D916B600742320 /* SwiftApiPlay */ = {
 			isa = PBXGroup;
 			children = (
+				26292E1921FC9872006C19BE /* MirrorPlay.swift */,
 				2604449121F2BEA900F92CEA /* TestCookie.swift */,
 				26C6E6CB21EB4BA500E34232 /* CodeablePlay.swift */,
 				26201E3921E7AAED005E3B16 /* StringPlay.swift */,
@@ -941,6 +944,7 @@
 				26A37DEC21E08684003393E9 /* MemoryLayoutTest.swift in Sources */,
 				263FE14521D916DB00742320 /* TestUiPasteBoard.swift in Sources */,
 				26201E3A21E7AAED005E3B16 /* StringPlay.swift in Sources */,
+				26292E1A21FC9872006C19BE /* MirrorPlay.swift in Sources */,
 				260DA1B621DA006B00368EFE /* StringFormat.swift in Sources */,
 				263FE14721D930D300742320 /* URLPlay.swift in Sources */,
 				26201E3821E7A082005E3B16 /* TestDataAndTime.swift in Sources */,
