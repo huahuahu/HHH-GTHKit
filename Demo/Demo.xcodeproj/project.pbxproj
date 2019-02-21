@@ -1095,7 +1095,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiger.shenzhen.TestTextView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1113,7 +1113,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiger.shenzhen.TestTextView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1131,7 +1131,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiger.shenzhen.FunctionProgram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Demo.app/Demo";
 			};
@@ -1150,7 +1150,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiger.shenzhen.FunctionProgram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Demo.app/Demo";
 			};
@@ -1327,7 +1327,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiger.shenzhen.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1347,7 +1347,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiger.shenzhen.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1369,7 +1369,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiger.shenzhen.DemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Demo.app/Demo";
 			};
@@ -1392,7 +1392,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiger.shenzhen.DemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Demo.app/Demo";
 			};
@@ -1411,7 +1411,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiger.shenzhen.CoreGraphFunc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1429,7 +1429,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiger.shenzhen.CoreGraphFunc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1446,7 +1446,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiger.shenzhen.CoreGraphUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = CoreGraphFunc;
 			};
@@ -1464,7 +1464,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiger.shenzhen.CoreGraphUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = CoreGraphFunc;
 			};
