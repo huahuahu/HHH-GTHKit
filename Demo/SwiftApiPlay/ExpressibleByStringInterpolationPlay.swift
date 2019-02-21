@@ -16,6 +16,7 @@ class ExpressibleByStringInterpolationPlay: XCTestCase {
 }
 
 //https://nshipster.com/expressiblebystringinterpolation/
+//swiftlint:disable function_body_length
 class ExpressibleByStringInterpolationSpec: QuickSpec {
     override func spec() {
         let dataComponent = DateComponents.init(year: 2019, month: 12, day: 31)
@@ -61,12 +62,48 @@ class ExpressibleByStringInterpolationSpec: QuickSpec {
             markup = XMLEscapedString(stringInterpolation: interpolation)
             expect(markup.description).to(equal("<p>Hello, &lt;bobby&gt;!</p>"))
         }
+        it("condition append") {
+            var isStarred = true
+            var str = "Cheese Sandwich \(if: isStarred, "(*)")"
+            expect(str).to(equal("Cheese Sandwich (*)"))
+            isStarred = false
+            str = "Cheese Sandwich \(if: isStarred, "(*)")"
+            expect(str).to(equal("Cheese Sandwich "))
+        }
+
+        it("optional not need") {
+            var value1: Int?
+            value1 = nil
+            var value2: Int?
+            value2 = 12
+            let str = "There's \(value1, default: "nil") and \(value2, default: "nil")"
+            expect(str).to(equal("There's nil and 12"))
+        }
     }
 }
 
 #if swift(<5)
 #error("Download Xcode 10.2 Beta 2 to see this in action")
 #endif
+
+//String.StringInterpolation 和 DefaultStringInterpolation 等价
+extension String.StringInterpolation {
+    /// 只有 `condition` 的返回值为 `true` 才进行插值
+    mutating func appendInterpolation(if condition: @autoclosure () -> Bool, _ literal: StringLiteralType) {
+        guard condition() else { return }
+        appendLiteral(literal)
+    }
+
+    /// 提供 `Optional` 字符串插值
+    /// 而不必强制使用 `String(describing:)`
+    public mutating func appendInterpolation<T>(_ value: T?, default defaultValue: String) where T: CustomStringConvertible {
+        if let value = value {
+            appendInterpolation(value)
+        } else {
+            appendLiteral(defaultValue)
+        }
+    }
+}
 
 extension DefaultStringInterpolation {
     mutating func appendInterpolation(_ value: Date,
@@ -129,8 +166,9 @@ extension XMLEscapedString: ExpressibleByStringInterpolation {
 
         mutating func appendInterpolation<T>(_ value: T)
             where T: CustomStringConvertible {
+                //swiftlint:disable line_length
                 // available on macos
-                //            let escaped = CFXMLCreateStringByEscapingEntities(nil, value.description as NSString, nil)! as NSString
+                // let escaped = CFXMLCreateStringByEscapingEntities(nil, value.description as NSString, nil)! as NSString
 
                 let escaped = value.description.map { (char) -> String in
                     if char == "<" {
