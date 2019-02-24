@@ -10,6 +10,7 @@ import XCTest
 import Quick
 import Nimble
 import Foundation
+//swfitlint:disable function_body_length
 
 class StringPlay: XCTestCase {
 
@@ -40,8 +41,27 @@ class StringPlay: XCTestCase {
 
 }
 
+class SwiftStringPlay: QuickSpec {
+//    https://juejin.im/post/5c4e83566fb9a049b2224325
+    override func spec() {
+        describe("原始字符串") {
+            it("去掉了转义操作", closure: {
+                let regularString = "\\Hello \\World"
+                let rawString = #"\Hello \World"#
+                expect(regularString).to(equal(rawString))
+            })
+            it("原始字符串里嵌入变量", closure: {
+                let name = "Taylor"
+                let greeting = #"Hello, \(name) is  \#(name)!"#
+                expect(greeting).to(equal("Hello, \\(name) is  Taylor!"))
+            })
+        }
+    }
+}
+
 class RegexPlaySpec: QuickSpec {
     //    https://nshipster.com/swift-regular-expressions/
+    //swfitlint:disable function_body_length
     override func spec() {
         it("正确识别正则表达式") {
             let invitation = "Fancy a game of Cluedo?"
