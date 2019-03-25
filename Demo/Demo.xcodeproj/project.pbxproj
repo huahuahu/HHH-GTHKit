@@ -35,6 +35,7 @@
 		264F5F5821B98ACB004EE536 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 264F5F5721B98ACB004EE536 /* Assets.xcassets */; };
 		264F5F5B21B98ACB004EE536 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 264F5F5921B98ACB004EE536 /* LaunchScreen.storyboard */; };
 		264F5F6621B98ACB004EE536 /* TestStringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264F5F6521B98ACB004EE536 /* TestStringExt.swift */; };
+		26730FAD222249B2003AD618 /* SwiftDynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26730FAC222249B2003AD618 /* SwiftDynamic.swift */; };
 		26A37DEC21E08684003393E9 /* MemoryLayoutTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A37DEB21E08684003393E9 /* MemoryLayoutTest.swift */; };
 		26A37DF121E0A088003393E9 /* LableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A37DF021E0A088003393E9 /* LableVC.swift */; };
 		26A37DF421E0A266003393E9 /* AlignmentSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A37DF321E0A266003393E9 /* AlignmentSelector.swift */; };
@@ -135,6 +136,7 @@
 		264F5F6121B98ACB004EE536 /* DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		264F5F6521B98ACB004EE536 /* TestStringExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestStringExt.swift; sourceTree = "<group>"; };
 		264F5F6721B98ACB004EE536 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26730FAC222249B2003AD618 /* SwiftDynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDynamic.swift; sourceTree = "<group>"; };
 		26A37DEB21E08684003393E9 /* MemoryLayoutTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MemoryLayoutTest.swift; path = SwiftApiPlay/MemoryLayoutTest.swift; sourceTree = SOURCE_ROOT; };
 		26A37DF021E0A088003393E9 /* LableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LableVC.swift; sourceTree = "<group>"; };
 		26A37DF321E0A266003393E9 /* AlignmentSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlignmentSelector.swift; sourceTree = "<group>"; };
@@ -260,6 +262,8 @@
 		263FE13B21D916B600742320 /* SwiftApiPlay */ = {
 			isa = PBXGroup;
 			children = (
+				26CF17EF223F1BDC008E44BC /* Memory */,
+				26730FAC222249B2003AD618 /* SwiftDynamic.swift */,
 				262F4B68221DA04A00625BDA /* ExpressibleByStringInterpolationPlay.swift */,
 				26292E1921FC9872006C19BE /* MirrorPlay.swift */,
 				2604449121F2BEA900F92CEA /* TestCookie.swift */,
@@ -366,6 +370,13 @@
 				26C6E6BF21EB041B00E34232 /* Info.plist */,
 			);
 			path = CoreGraphUITests;
+			sourceTree = "<group>";
+		};
+		26CF17EF223F1BDC008E44BC /* Memory */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Memory;
 			sourceTree = "<group>";
 		};
 		333B6E1684388B883A1EDA35 /* Pods */ = {
@@ -946,6 +957,7 @@
 				26C6E6CC21EB4BA500E34232 /* CodeablePlay.swift in Sources */,
 				26A37DEC21E08684003393E9 /* MemoryLayoutTest.swift in Sources */,
 				263FE14521D916DB00742320 /* TestUiPasteBoard.swift in Sources */,
+				26730FAD222249B2003AD618 /* SwiftDynamic.swift in Sources */,
 				26201E3A21E7AAED005E3B16 /* StringPlay.swift in Sources */,
 				26292E1A21FC9872006C19BE /* MirrorPlay.swift in Sources */,
 				260DA1B621DA006B00368EFE /* StringFormat.swift in Sources */,
