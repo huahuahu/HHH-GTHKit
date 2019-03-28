@@ -29,6 +29,7 @@
 		263FE14721D930D300742320 /* URLPlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263FE14621D930D300742320 /* URLPlay.swift */; };
 		263FE15F21D9484800742320 /* TestProtoclClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AFCF2521C69A580075E93B /* TestProtoclClass.swift */; };
 		263FE16021D9484B00742320 /* TestTuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D2AEB821C6853100241F4D /* TestTuple.swift */; };
+		26473B33224D175500AE7BE5 /* StringMemoryPlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26473B32224D175500AE7BE5 /* StringMemoryPlay.swift */; };
 		264F5F5121B98ACA004EE536 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264F5F5021B98ACA004EE536 /* AppDelegate.swift */; };
 		264F5F5321B98ACA004EE536 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264F5F5221B98ACA004EE536 /* ViewController.swift */; };
 		264F5F5621B98ACA004EE536 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 264F5F5421B98ACA004EE536 /* Main.storyboard */; };
@@ -50,6 +51,7 @@
 		26C6E6BE21EB041B00E34232 /* CoreGraphUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6E6BD21EB041B00E34232 /* CoreGraphUITests.swift */; };
 		26C6E6C821EB0BB900E34232 /* ParserDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6E6C721EB0BB900E34232 /* ParserDemo.swift */; };
 		26C6E6CC21EB4BA500E34232 /* CodeablePlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6E6CB21EB4BA500E34232 /* CodeablePlay.swift */; };
+		26CF17F32249A01B008E44BC /* PointersPlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CF17F22249A01B008E44BC /* PointersPlay.swift */; };
 		26DC61BA21ECD598000A5E80 /* TestLocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DC61B921ECD598000A5E80 /* TestLocks.swift */; };
 		78DAB02214E8565A94F89115 /* Pods_TestTextView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EEF1F625CE3BA27A666054B /* Pods_TestTextView.framework */; };
 		96721D477F5984298F1F29EE /* Pods_DemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B8DE6DF2EA9E5789CA4D14D /* Pods_DemoTests.framework */; };
@@ -126,6 +128,7 @@
 		263FE13E21D916B600742320 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		263FE14421D916DB00742320 /* TestUiPasteBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUiPasteBoard.swift; sourceTree = "<group>"; };
 		263FE14621D930D300742320 /* URLPlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLPlay.swift; sourceTree = "<group>"; };
+		26473B32224D175500AE7BE5 /* StringMemoryPlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringMemoryPlay.swift; sourceTree = "<group>"; };
 		264F5F4D21B98ACA004EE536 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		264F5F5021B98ACA004EE536 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		264F5F5221B98ACA004EE536 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +159,7 @@
 		26C6E6BF21EB041B00E34232 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26C6E6C721EB0BB900E34232 /* ParserDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ParserDemo.swift; path = FunctionProgram/ParserDemo.swift; sourceTree = SOURCE_ROOT; };
 		26C6E6CB21EB4BA500E34232 /* CodeablePlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeablePlay.swift; sourceTree = "<group>"; };
+		26CF17F22249A01B008E44BC /* PointersPlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointersPlay.swift; sourceTree = "<group>"; };
 		26D2AEB821C6853100241F4D /* TestTuple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTuple.swift; sourceTree = "<group>"; };
 		26DC61B921ECD598000A5E80 /* TestLocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLocks.swift; sourceTree = "<group>"; };
 		2804293325ABE20BAA7DACF6 /* Pods-TestTextView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTextView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestTextView/Pods-TestTextView.debug.xcconfig"; sourceTree = "<group>"; };
@@ -375,6 +379,8 @@
 		26CF17EF223F1BDC008E44BC /* Memory */ = {
 			isa = PBXGroup;
 			children = (
+				26CF17F22249A01B008E44BC /* PointersPlay.swift */,
+				26473B32224D175500AE7BE5 /* StringMemoryPlay.swift */,
 			);
 			path = Memory;
 			sourceTree = "<group>";
@@ -959,9 +965,11 @@
 				263FE14521D916DB00742320 /* TestUiPasteBoard.swift in Sources */,
 				26730FAD222249B2003AD618 /* SwiftDynamic.swift in Sources */,
 				26201E3A21E7AAED005E3B16 /* StringPlay.swift in Sources */,
+				26473B33224D175500AE7BE5 /* StringMemoryPlay.swift in Sources */,
 				26292E1A21FC9872006C19BE /* MirrorPlay.swift in Sources */,
 				260DA1B621DA006B00368EFE /* StringFormat.swift in Sources */,
 				263FE14721D930D300742320 /* URLPlay.swift in Sources */,
+				26CF17F32249A01B008E44BC /* PointersPlay.swift in Sources */,
 				262F4B69221DA04A00625BDA /* ExpressibleByStringInterpolationPlay.swift in Sources */,
 				26201E3821E7A082005E3B16 /* TestDataAndTime.swift in Sources */,
 				2604449221F2BEA900F92CEA /* TestCookie.swift in Sources */,
