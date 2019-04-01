@@ -136,6 +136,7 @@ class StringMemoryPlay: QuickSpec {
 
                 let utfPoints = rawPointer.advanced(by: 32).bindMemory(to: UInt8.self, capacity: largeStr.utf8.count)
                 print("utf8 inMemory:")
+                //swiftlint:disable line_length
                 largeStr.utf8.enumerated().forEach(({ (offset, point) in
                     print(String.init(format: "%02x", utfPoints.advanced(by: offset).pointee), separator: "_", terminator: "_")
                     expect(utfPoints.advanced(by: offset).pointee).to(equal(point))

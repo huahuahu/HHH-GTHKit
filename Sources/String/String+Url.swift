@@ -22,7 +22,7 @@ public extension String {
     /// should be percent-escaped in the query string.
     ///
     /// - returns: The percent-escaped string.
-    public func urlQueryEscape() -> String {
+    func urlQueryEscape() -> String {
         let generalDelimitersToEncode = ":#[]@" // does not include "?" or "/" due to RFC 3986 - Section 3.4
         let subDelimitersToEncode = "!$&'()*+,;="
 

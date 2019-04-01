@@ -93,7 +93,7 @@ extension Diagram {
     }
 }
 public extension Sequence where Iterator.Element == Diagram {
-    public var hcat: Diagram {
+    var hcat: Diagram {
         return reduce(Diagram(), |||)
     }
 }
@@ -158,9 +158,9 @@ public extension CGPoint {
         return CGSize.init(width: x, height: y)
     }
 
-    public static let bottom = CGPoint(x: 0.5, y: 1)
-    public static let top = CGPoint(x: 0.5, y: 1)
-    public static let center = CGPoint(x: 0.5, y: 0.5)
+    static let bottom = CGPoint(x: 0.5, y: 1)
+    static let top = CGPoint(x: 0.5, y: 1)
+    static let center = CGPoint(x: 0.5, y: 0.5)
 }
 
 public extension CGContext {
@@ -178,7 +178,7 @@ public extension CGContext {
         }
     }
 
-    public func draw(_ diagram: Diagram, in bounds: CGRect) {
+    func draw(_ diagram: Diagram, in bounds: CGRect) {
         let center = CGPoint.init(x: 0.5, y: 0.5)
         switch diagram {
         case let .primitive(size, primitive):

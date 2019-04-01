@@ -61,7 +61,7 @@ class SwiftStringPlay: QuickSpec {
 
 class RegexPlaySpec: QuickSpec {
     //    https://nshipster.com/swift-regular-expressions/
-    //swfitlint:disable function_body_length
+    //swiftlint:disable function_body_length
     override func spec() {
         it("正确识别正则表达式") {
             let invitation = "Fancy a game of Cluedo?"

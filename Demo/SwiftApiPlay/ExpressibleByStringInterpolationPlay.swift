@@ -85,7 +85,6 @@ class ExpressibleByStringInterpolationSpec: QuickSpec {
 #if swift(<5)
 #error("Download Xcode 10.2 Beta 2 to see this in action")
 #endif
-
 //String.StringInterpolation 和 DefaultStringInterpolation 等价
 extension String.StringInterpolation {
     /// 只有 `condition` 的返回值为 `true` 才进行插值
@@ -93,7 +92,7 @@ extension String.StringInterpolation {
         guard condition() else { return }
         appendLiteral(literal)
     }
-
+    //swiftlint:disable line_length
     /// 提供 `Optional` 字符串插值
     /// 而不必强制使用 `String(describing:)`
     public mutating func appendInterpolation<T>(_ value: T?, default defaultValue: String) where T: CustomStringConvertible {

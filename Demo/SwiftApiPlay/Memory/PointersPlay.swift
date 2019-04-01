@@ -13,7 +13,7 @@ import Nimble
 import HHHKit
 
 class PointerPlay: QuickSpec {
-    //swiftdisable:function_body_length
+    //swiftlint:disable function_body_length
     override func spec() {
         describe("访问指针内存的方式") {
             let intNumber = 23

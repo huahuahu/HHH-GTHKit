@@ -16,7 +16,7 @@ public extension DispatchQueue {
 
 
     /// 判断当前是否是main queue
-    public static var isMain: Bool {
+    static var isMain: Bool {
         return DispatchQueue.getSpecific(key: token) != nil
     }
 }

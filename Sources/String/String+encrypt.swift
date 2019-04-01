@@ -13,12 +13,10 @@ public extension String {
     /// 对字符串MD5加密
     ///
     /// - Returns: 字符串md5 之后的结果
-    public func md5() -> String {
+    func md5() -> String {
         var digest = [UInt8](repeating: 0, count: Int(CC_MD5_DIGEST_LENGTH))
-        if let d = self.data(using: String.Encoding.utf8) {
-            _ = d.withUnsafeBytes { (body: UnsafePointer<UInt8>) in
-                CC_MD5(body, CC_LONG(d.count), &digest)
-            }
+        _ = withCString { (body) in
+            CC_MD5(body, CC_LONG(self.utf8.count), &digest)
         }
         return digest.reduce("") { $0 + String.init(format: "%02x", $1) }
     }
@@ -26,14 +24,17 @@ public extension String {
     /// 对字符串 sha1 加密
     ///
     /// - Returns: 字符串 sha1 之后的结果
-    public func sha1() -> String {
+    func sha1() -> String {
         var digest = [UInt8](repeating: 0, count: Int(CC_SHA1_DIGEST_LENGTH))
-
-        if let d = self.data(using: String.Encoding.utf8) {
-            _ = d.withUnsafeBytes { (body: UnsafePointer<UInt8>) in
-                CC_SHA1(body, CC_LONG(d.count), &digest)
-            }
+        _ = withCString { (body) in
+            CC_SHA1(body, CC_LONG(self.utf8.count), &digest)
         }
+
+//        if let d = self.data(using: String.Encoding.utf8) {
+//            _ = d.withUnsafeBytes { (body: UnsafePointer<UInt8>) in
+//                CC_SHA1(body, CC_LONG(d.count), &digest)
+//            }
+//        }
         return digest.reduce("") { $0 + String.init(format: "%02x", $1) }
     }
 }

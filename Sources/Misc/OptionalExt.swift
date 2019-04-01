@@ -12,7 +12,7 @@ import Foundation
 public extension Optional where Wrapped == Bool {
 
     /// 如果不是nil，返回对应的值；否则返回false
-    public var orFalse: Bool {
+    var orFalse: Bool {
         if let b = self {
             return b
         } else {
@@ -21,7 +21,7 @@ public extension Optional where Wrapped == Bool {
     }
 
     /// 如果不是nil，返回对应的值；否则返回true
-    public var orTrue: Bool {
+    var orTrue: Bool {
         if let b = self {
             return b
         } else {
@@ -33,13 +33,13 @@ public extension Optional where Wrapped == Bool {
 public extension Optional where Wrapped: Collection {
 
     /// 如果非空，返回值；否则返回nil
-    public var nonEmpty: Wrapped? {
+    var nonEmpty: Wrapped? {
         return self?.isEmpty == true ? nil : self
     }
 }
 
 public extension Optional {
-
+//    https://www.objc.io/blog/2019/02/26/from-optionals-to-errors/
     /// 判断是否为空，如果是空，抛出异常
     ///
     /// - Parameter err: 需要被抛出的异常
