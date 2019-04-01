@@ -138,5 +138,26 @@ class OptionalExtSpec: QuickSpec {
                 expect(str.nonEmpty).to(beNil())
             })
         }
+        describe("测试nilorerror") {
+            var gift: String? = "gift"
+            do {
+                let unwrapped = try gift.or(NSError.init(domain: "no gift", code: -29, userInfo: nil))
+                expect(unwrapped).to(equal("gift"))
+            } catch {
+                assertionFailure()
+            }
+
+            gift = nil
+            do {
+                let unwrapped = try gift.or(NSError.init(domain: "no gift", code: -29, userInfo: nil))
+                expect(unwrapped).to(equal("gift"))
+                assertionFailure()
+            } catch {
+                let err = error as NSError
+                expect(err.domain).to(equal("no gift"))
+                expect(err.code).to(equal(-29))
+            }
+
+        }
     }
 }

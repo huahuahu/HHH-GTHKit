@@ -38,3 +38,17 @@ public extension Optional where Wrapped: Collection {
     }
 }
 
+public extension Optional {
+
+    /// 判断是否为空，如果是空，抛出异常
+    ///
+    /// - Parameter err: 需要被抛出的异常
+    /// - Returns: 如果不是nil，返回解包后的结果
+    /// - Throws: 传入的异常
+    func or(_ err: Error) throws -> Wrapped {
+        guard let value = self else {
+            throw err
+        }
+        return value
+    }
+}
