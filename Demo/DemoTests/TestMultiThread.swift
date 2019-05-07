@@ -6,8 +6,10 @@
 //  Copyright © 2019 huahuahu. All rights reserved.
 //
 
-import XCTest
-import HHHKit
+@testable import Demo
+@testable import HHHKit
+import Quick
+import Nimble
 
 class TestMultiThread: XCTestCase {
 
@@ -54,4 +56,32 @@ class TestMultiThread: XCTestCase {
         wait(for: exps, timeout: 100)
     }
 
+}
+
+class MultiThread: QuickSpec {
+    override func spec() {
+        describe("dispatchOnce") {
+            it(" 不同线程执行", closure: {
+                let token = "testdf"
+                var num = 0
+                var count = Atomic<Int>.init(0)
+                let group = DispatchGroup.init()
+                DispatchQueue.concurrentPerform(iterations: 100, execute: { (index) in
+                    group.enter()
+                    DispatchQueue.global().async {
+                        DispatchQueue.once(token: token) {
+                            num += 1
+                        }
+                        count.mutate {
+                            $0 += 1
+                        }
+                        group.leave()
+                    }
+                })
+                group.wait()
+                expect(count.value).to(equal(100))
+                expect(num).to(equal(1))
+            })
+        }
+    }
 }
