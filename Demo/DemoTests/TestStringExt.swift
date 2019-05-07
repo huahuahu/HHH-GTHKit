@@ -206,33 +206,6 @@ extension TestStringExt {
     }
 }
 
-class Wrapper: QuickSpec {
-
-    class Example {
-        var value = ""
-    }
-
-    override func spec() {
-        describe("Wrapped Weak Test") {
-            it("被其他对象持有时，可以取到值") {
-                let expObj = Example.init()
-                let weakWrap = Weak<Example>()
-                weakWrap.value = expObj
-                expect(weakWrap.value).toNot(beNil())
-            }
-            it("没有被其他对象持有时，取到的值时是nil") {
-                var expObj: Example? = Example.init()
-                var array = [expObj]
-                let weakWrap = Weak<Example>()
-                weakWrap.value = expObj
-                expObj = nil
-                array.removeAll()
-                expect(weakWrap.value).to(beNil())
-            }
-        }
-    }
-}
-
 class EncryptString: QuickSpec {
     override func spec() {
         describe("encrypt check") {
@@ -243,6 +216,43 @@ class EncryptString: QuickSpec {
             it("sha1 right", closure: {
                 expect("huahuahu".sha1()).to(equal("36eda0c2b96f129cc40e64705a7c4fe3dc7f5a08"))
                 expect("HUAHUAHU".sha1()).to(equal("a8a0e07b5f1658ebf55790bca3bf3978064948b9"))
+            })
+        }
+    }
+}
+
+class Regex: QuickSpec {
+    override func spec() {
+        describe("正则测试") {
+            it("可以生成正则", closure: {
+                let regexStr: StaticString = "f.*d"
+                let regex = NSRegularExpression.init(regexStr)
+                expect(regex).toNot(beNil())
+            })
+            it("切分字符串 ", closure: {
+                do {
+                    //处理好前后都有的
+                    var rawStr = "ddddceeecffcg"
+                    var splitted = try rawStr.splitByRegex("c")
+                    expect(splitted.count).to(equal(4))
+                    expect(splitted.first).to(equal("dddd"))
+                    expect(splitted.last).to(equal("g"))
+                    //处理好后面顶格的
+                    rawStr = "ddddceeecffc"
+                    splitted = try rawStr.splitByRegex("c")
+                    expect(splitted.count).to(equal(3))
+                    expect(splitted.first).to(equal("dddd"))
+                    expect(splitted.last).to(equal("ff"))
+                    //处理好前面顶格的
+                    rawStr = "ceeecffcg"
+                    splitted = try rawStr.splitByRegex("c")
+                    expect(splitted.count).to(equal(3))
+                    expect(splitted.first).to(equal("eee"))
+                    expect(splitted.last).to(equal("g"))
+
+                } catch {
+                    XCTFail("do not throw!")
+                }
             })
         }
     }
