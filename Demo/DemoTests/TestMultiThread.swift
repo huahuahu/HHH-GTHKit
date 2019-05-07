@@ -64,7 +64,7 @@ class MultiThread: QuickSpec {
             it(" 不同线程执行", closure: {
                 let token = "testdf"
                 var num = 0
-                var count = Atomic<Int>.init(0)
+                let count = Atomic<Int>.init(0)
                 let group = DispatchGroup.init()
                 DispatchQueue.concurrentPerform(iterations: 100, execute: { (index) in
                     group.enter()
