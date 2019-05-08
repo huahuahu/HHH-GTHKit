@@ -37,6 +37,7 @@
 		264F5F5B21B98ACB004EE536 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 264F5F5921B98ACB004EE536 /* LaunchScreen.storyboard */; };
 		264F5F6621B98ACB004EE536 /* TestStringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264F5F6521B98ACB004EE536 /* TestStringExt.swift */; };
 		26730FAD222249B2003AD618 /* SwiftDynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26730FAC222249B2003AD618 /* SwiftDynamic.swift */; };
+		26816B0A2283247E00815030 /* DispatchQueuePlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26816B092283247E00815030 /* DispatchQueuePlay.swift */; };
 		26A37DEC21E08684003393E9 /* MemoryLayoutTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A37DEB21E08684003393E9 /* MemoryLayoutTest.swift */; };
 		26A37DF121E0A088003393E9 /* LableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A37DF021E0A088003393E9 /* LableVC.swift */; };
 		26A37DF421E0A266003393E9 /* AlignmentSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A37DF321E0A266003393E9 /* AlignmentSelector.swift */; };
@@ -141,6 +142,7 @@
 		264F5F6521B98ACB004EE536 /* TestStringExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestStringExt.swift; sourceTree = "<group>"; };
 		264F5F6721B98ACB004EE536 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26730FAC222249B2003AD618 /* SwiftDynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDynamic.swift; sourceTree = "<group>"; };
+		26816B092283247E00815030 /* DispatchQueuePlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueuePlay.swift; sourceTree = "<group>"; };
 		26A37DEB21E08684003393E9 /* MemoryLayoutTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MemoryLayoutTest.swift; path = SwiftApiPlay/MemoryLayoutTest.swift; sourceTree = SOURCE_ROOT; };
 		26A37DF021E0A088003393E9 /* LableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LableVC.swift; sourceTree = "<group>"; };
 		26A37DF321E0A266003393E9 /* AlignmentSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlignmentSelector.swift; sourceTree = "<group>"; };
@@ -276,6 +278,7 @@
 				2604449121F2BEA900F92CEA /* TestCookie.swift */,
 				26C6E6CB21EB4BA500E34232 /* CodeablePlay.swift */,
 				26201E3921E7AAED005E3B16 /* StringPlay.swift */,
+				26816B092283247E00815030 /* DispatchQueuePlay.swift */,
 				26201E3721E7A082005E3B16 /* TestDataAndTime.swift */,
 				26A37DF721E39D4A003393E9 /* TestOptional.swift */,
 				263FE14621D930D300742320 /* URLPlay.swift */,
@@ -978,6 +981,7 @@
 				26201E3821E7A082005E3B16 /* TestDataAndTime.swift in Sources */,
 				2604449221F2BEA900F92CEA /* TestCookie.swift in Sources */,
 				263FE15F21D9484800742320 /* TestProtoclClass.swift in Sources */,
+				26816B0A2283247E00815030 /* DispatchQueuePlay.swift in Sources */,
 				263FE16021D9484B00742320 /* TestTuple.swift in Sources */,
 				26A37DF821E39D4A003393E9 /* TestOptional.swift in Sources */,
 			);
