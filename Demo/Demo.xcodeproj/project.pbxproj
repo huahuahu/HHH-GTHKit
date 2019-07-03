@@ -43,6 +43,8 @@
 		26A37DF121E0A088003393E9 /* LableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A37DF021E0A088003393E9 /* LableVC.swift */; };
 		26A37DF421E0A266003393E9 /* AlignmentSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A37DF321E0A266003393E9 /* AlignmentSelector.swift */; };
 		26A37DF821E39D4A003393E9 /* TestOptional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A37DF721E39D4A003393E9 /* TestOptional.swift */; };
+		26B2D97B22CCEA91008D3AB1 /* PropertyWrapperPlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B2D97A22CCEA91008D3AB1 /* PropertyWrapperPlay.swift */; };
+		26B2D97D22CCF118008D3AB1 /* Basic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B2D97C22CCF118008D3AB1 /* Basic.swift */; };
 		26C6E68221EAE9E700E34232 /* CoreGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6E68121EAE9E700E34232 /* CoreGraph.swift */; };
 		26C6E68A21EAF75A00E34232 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6E68921EAF75A00E34232 /* AppDelegate.swift */; };
 		26C6E68C21EAF75A00E34232 /* CoreGraphDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6E68B21EAF75A00E34232 /* CoreGraphDemo.swift */; };
@@ -150,6 +152,8 @@
 		26A37DF321E0A266003393E9 /* AlignmentSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlignmentSelector.swift; sourceTree = "<group>"; };
 		26A37DF721E39D4A003393E9 /* TestOptional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestOptional.swift; sourceTree = "<group>"; };
 		26AFCF2521C69A580075E93B /* TestProtoclClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProtoclClass.swift; sourceTree = "<group>"; };
+		26B2D97A22CCEA91008D3AB1 /* PropertyWrapperPlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyWrapperPlay.swift; sourceTree = "<group>"; };
+		26B2D97C22CCF118008D3AB1 /* Basic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basic.swift; sourceTree = "<group>"; };
 		26C6E68121EAE9E700E34232 /* CoreGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreGraph.swift; sourceTree = "<group>"; };
 		26C6E68721EAF75A00E34232 /* CoreGraphFunc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreGraphFunc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26C6E68921EAF75A00E34232 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -275,10 +279,12 @@
 				26CF17EF223F1BDC008E44BC /* Memory */,
 				26730FAC222249B2003AD618 /* SwiftDynamic.swift */,
 				26F3B9A522564CE800489DF2 /* TypeErase.swift */,
+				26B2D97C22CCF118008D3AB1 /* Basic.swift */,
 				262F4B68221DA04A00625BDA /* ExpressibleByStringInterpolationPlay.swift */,
 				26292E1921FC9872006C19BE /* MirrorPlay.swift */,
 				2604449121F2BEA900F92CEA /* TestCookie.swift */,
 				26C6E6CB21EB4BA500E34232 /* CodeablePlay.swift */,
+				26B2D97A22CCEA91008D3AB1 /* PropertyWrapperPlay.swift */,
 				261A4DAD22B4C281003E7CD8 /* OpaqueTypesSpec.swift */,
 				26201E3921E7AAED005E3B16 /* StringPlay.swift */,
 				26816B092283247E00815030 /* DispatchQueuePlay.swift */,
@@ -969,7 +975,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26B2D97B22CCEA91008D3AB1 /* PropertyWrapperPlay.swift in Sources */,
 				26C6E6CC21EB4BA500E34232 /* CodeablePlay.swift in Sources */,
+				26B2D97D22CCF118008D3AB1 /* Basic.swift in Sources */,
 				26A37DEC21E08684003393E9 /* MemoryLayoutTest.swift in Sources */,
 				263FE14521D916DB00742320 /* TestUiPasteBoard.swift in Sources */,
 				26F3B9A622564CE800489DF2 /* TypeErase.swift in Sources */,

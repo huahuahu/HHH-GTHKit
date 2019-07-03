@@ -16,6 +16,9 @@ import Nimble
 class SomeSpec: QuickSpec {
     override func spec() {
         it("some 作为修饰符") {
+            guard #available(iOS 13, *) else {
+                return
+            }
             func makeInt() -> some Equatable {
                 return 5
             }
