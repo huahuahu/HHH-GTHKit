@@ -6,10 +6,10 @@
 //
 
 import Foundation
-extension HHKitCommon {
+public extension HHKitCommon {
 
     /// 读取系统的proxy设置
-    public static func readSystemProxyURL() -> URL? {
+     static func readSystemProxyURL() -> URL? {
         guard let proxySettings = CFNetworkCopySystemProxySettings()?.takeRetainedValue() else { return nil }
 
         if let httpEnabled = unsafeBitCast(

@@ -7,8 +7,8 @@
 
 import Foundation
 
-enum HHKitCommon {
-    func addVCAsSubviewIn(_ containerVC: UIViewController, containerView: UIView, subVC: UIViewController) {
+public enum HHKitCommon {
+    static func addVCAsSubviewIn(_ containerVC: UIViewController, containerView: UIView, subVC: UIViewController) {
         containerVC.addChild(subVC)
         containerView.addSubview(subVC.view)
         subVC.didMove(toParent: containerVC)

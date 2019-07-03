@@ -73,7 +73,7 @@ class URLPlay: XCTestCase {
         XCTAssertTrue(url.path.hasPrefix("/"))
 
         url = URL.init(string: "ftp://prep.ai.mit.edu/pub/gnu;type=d")!
-        XCTAssertEqual(url.lastPathComponent, "gnu", "pathComponent 不包括参数")
+        XCTAssertEqual(url.lastPathComponent, "gnu;type=d", "pathComponent 不包括参数")
         //        If the URL contains a parameter string, it is appended to the path with a ;
         XCTAssertTrue(url.path.hasSuffix(";type=d"), "parameter被加在path后面，设计不合理")
         XCTAssertEqual(url.pathComponents.first!, "/", "第一个pathComponent是/")

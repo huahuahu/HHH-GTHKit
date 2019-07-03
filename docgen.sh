@@ -7,7 +7,7 @@ cd Demo
 # equal to xcodebuild -workspace Demo.xcworkspace -scheme Demo
 jazzy \
  --clean \
- -x -workspace,Demo.xcworkspace,-scheme,HHHKit \
+ --xcodebuild-arguments -workspace,Demo.xcworkspace,-scheme,HHHKit \
  -o ../doc \
  -a huahuahu\
  --github_url https://github.com/huahuahu/HHH-GTHKit\
